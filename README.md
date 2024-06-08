@@ -165,3 +165,8 @@ Helps in running of scripts/deployment without having to write commands too much
 ```shell
 --verify --etherscan-api-key $YOUR_ETHERSCAN_API_KEY
 ```
+
+## Credits
+
+This project was developed as part of the Foundry Fund Me course by [Cyfrin](https://github.com/Cyfrin/foundry-fund-me-f23). Special thanks to Cyfrin for providing the course materials and guidance.
+
