@@ -66,16 +66,14 @@ contract FundMeTest is StdCheats, CodeConstants, Test {
         uint256 startingContractBalance = address(fundMe).balance;
         uint256 startingOwnerBalance = fundMe.getOwner().balance;
 
-        console.log("STARTING OWNER BALANCE: ", startingOwnerBalance);
-        console.log("STARTING CONTRACT BALANCE: ", startingContractBalance);
+
         vm.prank(fundMe.getOwner());
         fundMe.withdraw();
 
         uint256 endContractBalance = address(fundMe).balance;
         uint256 endOwnerBalance = fundMe.getOwner().balance;
 
-        console.log("ENDING OWNER BALANCE: ", endOwnerBalance);
-        console.log("ENDING OWNER BALANCE: ", endContractBalance);
+
 
         assertEq(endContractBalance, 0); // contract balance should be empty after withdraw
         assertEq(
